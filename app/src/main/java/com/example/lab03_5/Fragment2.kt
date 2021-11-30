@@ -27,11 +27,6 @@ class Fragment2 : Fragment() {
         btn2Fragment1.setOnClickListener {
             navController.navigate(R.id.action_fragment2_to_fragment1)
         }
-
-        val navBottom = view.findViewById<View>(R.id.nav_bottom) as BottomNavigationView
-        navBottom.setOnNavigationItemReselectedListener {
-            navController.navigate(R.id.action_fragment1_to_activityAbout)
-        }
         return view
     }
 }
