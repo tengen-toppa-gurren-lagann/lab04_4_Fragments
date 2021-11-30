@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bar"
+    app:startDestination="@id/fragmentBar">
+
+    <fragment
+        android:id="@+id/fragmentBar"
+        android:name="com.example.lab03_5.FragmentBar"
+        android:label="fragment_bar"
+        tools:layout="@layout/fragment_bar" >
+        <action
+            android:id="@+id/action_fragmentBar_to_activityAbout"
+            app:destination="@id/activityAbout" />
+    </fragment>
+    <activity
+        android:id="@+id/activityAbout"
+        android:name="com.example.lab03_5.ActivityAbout"
+        android:label="activity_about"
+        tools:layout="@layout/activity_about" />
+</navigation>
