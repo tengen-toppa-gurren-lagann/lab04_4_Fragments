@@ -1,4 +1,4 @@
-package com.example.lab03_5
+package com.example.lab04_4_Fragments
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

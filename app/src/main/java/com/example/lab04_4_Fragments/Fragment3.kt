@@ -1,4 +1,4 @@
-package com.example.lab03_5
+package com.example.lab04_4_Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -17,12 +17,12 @@ class Fragment3 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_3, container, false)
         val navController = findNavController()
 
-        val btn2Fragment2 = view.findViewById<View>(R.id.btn2second)
+        val btn2Fragment2 = view.findViewById<View>(R.id.bnToSecond)
         btn2Fragment2.setOnClickListener {
             navController.navigate(R.id.action_fragment3_to_fragment2)
         }
 
-        val btn2Fragment1 = view.findViewById<View>(R.id.btn2first)
+        val btn2Fragment1 = view.findViewById<View>(R.id.bnToFirst)
         btn2Fragment1.setOnClickListener {
             navController.navigate(R.id.action_fragment3_to_fragment1)
         }

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lab03_5">
+    package="com.example.lab04_4_Fragments">
+
+    <!-- ВНИМАНИЕ! Очень важные теги для активностей:
+     1. Для MainActivity нужно указать режим запуска android:launchMode="singleTop",
+        т.к. при его отсутствии после вызова ActivityAbout и ее закрытия MainActivity будет запущена заново
+        и произойдет переход к стартовому фрагменту, независимо от того, из какого фрагмента была вызвана ActivityAbout
+     2. Для ActivityAbout нужно указать родительскую активность тегом android:parentActivityName=".MainActivity",
+        иначе при старте ActivityAbout не появится кнопка "Navigation Up", т.к. ActivityAbout будет считать, что она первая в стеке.
+     -->
 
     <application
         android:allowBackup="true"
@@ -8,13 +16,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.lab03_5">
+        android:theme="@style/Theme.lab04_4_Fragments">
         <activity
-            android:name="com.example.lab03_5.ActivityAbout"
-            android:exported="false" />
+            android:name=".ActivityAbout"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
